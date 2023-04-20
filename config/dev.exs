@@ -60,7 +60,7 @@ config :nieustraszony, NieustraszonyWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/nieustraszony_web/(live|views)/.*(ex)$",
-      ~r"lib/nieustraszony_web/templates/.*(eex)$"
+      ~r"lib/nieustraszony_web/templates/.*(eex|md)$"
     ]
   ]
 
