@@ -26,7 +26,16 @@ config :nieustraszony, NieustraszonyWeb.Endpoint,
   secret_key_base: "NfT/JektH3/8j2pZxqND/RDFxjU35qq2LdT6jfl/1+LSNcd8uaXAKizUbge1WfOm",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild:
+      {Esbuild, :install_and_run,
+       [
+         :default,
+         ~w(--sourcemap=inline  --watch --loader:.ttf=file --loader:.woff=file --loader:.gif=file --loader:.svg=file --loader:.eot=file --loader:.png=file)
+       ]},
+    sass: [
+      "./assets/scss/theme.scss:./assets/css/theme.css",
+      "--watch"
+    ]
   ]
 
 # ## SSL Support
@@ -60,7 +69,7 @@ config :nieustraszony, NieustraszonyWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/nieustraszony_web/(live|views)/.*(ex)$",
-      ~r"lib/nieustraszony_web/templates/.*(eex)$"
+      ~r"lib/nieustraszony_web/templates/.*(eex|md)$"
     ]
   ]
 

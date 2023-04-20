@@ -17,6 +17,8 @@ config :nieustraszony, NieustraszonyWeb.Endpoint,
   pubsub_server: Nieustraszony.PubSub,
   live_view: [signing_salt: "3C3vQ33U"]
 
+config :phoenix, :template_engines, md: PhoenixMarkdown.Engine
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
@@ -46,6 +48,11 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :phoenix_markdown, :earmark, %{
+  gfm: true,
+  breaks: true
+}
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
