@@ -14,6 +14,7 @@ on:
 # Sets the ENV `MIX_ENV` to `test` for running tests
 env:
   MIX_ENV: test
+  ImageOS: ubuntu20
   
 permissions:
   contents: read
