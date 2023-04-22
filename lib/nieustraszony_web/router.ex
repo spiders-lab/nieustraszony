@@ -18,6 +18,8 @@ defmodule NieustraszonyWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/elixir/", PageController, :elixir
+    get "/hacking/", PageController, :hacking
   end
 
   # Other scopes may use custom stacks.
