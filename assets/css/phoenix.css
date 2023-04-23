@@ -702,7 +702,16 @@ header nav ul {
 header nav a {
   display: block;
 }
-
+aside {
+  position: fixed;
+  background-color: #fefefe;
+  padding: 1rem 1rem 0 1rem !important;
+  max-width: 18rem !important;
+}
+aside nav ul {
+  list-style: none;
+  margin-bottom: 0;
+}
 @media (min-width: 40rem) {
   /* Small devices (landscape phones, 576px and up) */
   header section {
@@ -714,5 +723,19 @@ header nav a {
   .phx-logo {
     flex-basis: 527px;
     margin: 2rem 1rem;
+  }
+}
+@media (max-width: 39rem) {
+  .phx-logo h1 {
+    font-size: 2rem;
+  }
+  .row .column.column-25 {
+    max-width: 50%;
+  }
+  .row .column.column-offset-25 {
+    margin-left: 0;
+  }
+  aside {
+    max-width: 50% !important;
   }
 }
