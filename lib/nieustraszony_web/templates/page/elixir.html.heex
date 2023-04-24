@@ -3,10 +3,23 @@
   <p>Miejsce pełne eksperymentów</p>
 </section>
 <section class="row">
-  <article class="column">
+  <aside class="column column-25">
+    <nav>
+      <ul>
+        <li>
+          <a href="#markdown_templates_phoenix">Szablony Markdown we frameworku Phoenix</a>
+        </li>
+        <li>
+          <a href="#elixir_on_production">Elixir na produkcji</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <article class="column column-offset-25">
     <div id="markdown_templates_phoenix">
       <%= render NieustraszonyWeb.ArticleView, "markdown_templates_phoenix.html", assigns %>
     </div>
+    <hr />
     <div id="elixir_on_production">
       <%= render NieustraszonyWeb.ArticleView, "elixir_on_production.html", assigns %>
     </div>
