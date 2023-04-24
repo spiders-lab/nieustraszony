@@ -4,7 +4,12 @@
 </section>
 <section class="row">
   <article class="column">
-    <%= render NieustraszonyWeb.ArticleView, "markdown_templates_phoenix.html", assigns %>
+    <div id="markdown_templates_phoenix">
+      <%= render NieustraszonyWeb.ArticleView, "markdown_templates_phoenix.html", assigns %>
+    </div>
+    <div id="elixir_on_production">
+      <%= render NieustraszonyWeb.ArticleView, "elixir_on_production.html", assigns %>
+    </div>
   </article>
 </section>
 <section class="row">
