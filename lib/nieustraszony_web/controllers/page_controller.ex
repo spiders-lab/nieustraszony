@@ -12,4 +12,8 @@ defmodule NieustraszonyWeb.PageController do
   def hacking(conn, _params) do
     render(conn, "hacking.html")
   end
+  
+  def postgresql(conn, _params) do
+    render(conn, "postgresql.html")
+  end
 end

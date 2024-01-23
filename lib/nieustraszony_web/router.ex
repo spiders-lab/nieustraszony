@@ -20,6 +20,7 @@ defmodule NieustraszonyWeb.Router do
     get "/", PageController, :index
     get "/elixir/", PageController, :elixir
     get "/hacking/", PageController, :hacking
+    get "/postgresql/", PageController, :postgresql
   end
 
   # Other scopes may use custom stacks.
